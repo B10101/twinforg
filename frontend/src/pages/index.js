@@ -10,6 +10,7 @@ import Orders from "./Orders";
 import VerifyPayment from "./Verify";
 import PaymentStatus from "./PaymentStatus";
 import Tinkertronics from "./Tinkertronics";
+import Portfolio from "./Portfolio";
 
 export {
     About,
@@ -23,6 +24,7 @@ export {
     Orders,
     VerifyPayment,
     PaymentStatus,
-    Tinkertronics
+    Tinkertronics,
+    Portfolio
 
 };

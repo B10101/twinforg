@@ -18,11 +18,11 @@ import stripe from "./stripe.png";
 import mpesaicon from "./mpesa.svg";
 import check from "./check.png";
 import close from "./close.png";
-import p16_img from "./product_16.png";
 import lume_pic from "./lume_pic.jpg";
 import trinkets from "./trinkets.png";
 import instagram from "./instagram_icon.png";
-import twinforge_icon from "./twinforge.jpeg"
+import twinforge_icon from "./twinforge.jpeg";
+import front from "./front.png";
 
 export {
   
@@ -45,10 +45,10 @@ export {
   mpesaicon,
   check,
   close,
-  p16_img,
   lume_pic,
   trinkets,
   instagram,
-  twinforge_icon
+  twinforge_icon,
+  front
   
 };

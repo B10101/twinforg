@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import Hero from "./Hero";
+import HeroAbt from "./HeroAbt";
 import LatestCollection from "./LatestCollection";
 import Title from "./Title";
 import ProductItem from "./ProductItem";
@@ -20,4 +21,5 @@ export {
     Searchbar,
     RelatedProducts,
     CartTotal,
+    HeroAbt
 }

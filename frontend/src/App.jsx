@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes,Route } from 'react-router-dom'
-import { Home,About,Contact,Login, Product, Collection, Cart, PlaceOrder, Orders, VerifyPayment,PaymentStatus, Tinkertronics} from './pages'
+import { Home,About,Contact,Login, Product, Collection, Cart, PlaceOrder, Orders, VerifyPayment,PaymentStatus, Tinkertronics, Portfolio} from './pages'
 import { Footer, Navbar, Searchbar } from './components'
 import {ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -30,6 +30,7 @@ const App = () => {
           <Route path='/tinkertronics' element={<Tinkertronics/>}/>
           <Route path='/verify-payment' element={<VerifyPayment />} />
           <Route path='/payment-status/:orderId' element={<PaymentStatus />} />
+          <Route path='/portfolio' element={<Portfolio />} />
         </Routes>
         <Footer/>
       </div>

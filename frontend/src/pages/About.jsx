@@ -1,17 +1,18 @@
 import React from 'react'
-import { Title } from '../components'
-import { p16_img } from '../assets/assets'
+import { HeroAbt, Title } from '../components'
+import { front } from '../assets/assets'
 import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
     <div>
-      <div className='text-2xl text-center pt-8'>
-        <Title text1={'About'} text2={'Us'} />
+      <div className='flex justify-center'>
+        <div>
+          <HeroAbt />
+        </div>
       </div>
 
-      <div className='my-10 flex flex-col items-center gap-8'>
-        <img className='w-full md:w-2/3 lg:w-1/2 rounded-xl drop-shadow-lg' src={p16_img} alt="" />
+      <div className='my-8 flex flex-col items-center gap-4'>
 
         {/* Text Content Below */}
         <div className='flex flex-col justify-center gap-6 text-gray-600 max-w-3xl px-4'>
