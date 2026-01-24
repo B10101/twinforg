@@ -16,12 +16,12 @@ const About = () => {
 
         {/* Text Content Below */}
         <div className='flex flex-col justify-center gap-6 text-gray-600 max-w-3xl px-4'>
-          <p>Twinforge Technologies is a team of mechatronic engineers focused on designing and building practical technology that solves real-world problems.</p>
+          <p>Layered kenya is a subsidiary of Twinforge Technologies that is focused on designing and building innovative consumer technology .</p>
 
           <p>Our expertise spans hardware development, embedded systems, automation, rapid prototyping, and modern web technologies. <br />
             Beyond engineering products, we also help individuals and businesses establish a strong digital presence through custom website development and technical consulting. This blend of physical engineering and software allows us to deliver end-to-end solutions—from concept and design to deployment and support.
             We believe engineering should be purposeful, efficient, and forward-thinking. Every project we take on is driven by functionality, reliability, and long-term value, not hype.
-            <br /> <br />At Twinforge Technologies, we don't just design systems. We build tools that work.
+            <br /> <br />At Layered, we don't just design systems. We build tools that work.
           </p>
 
           <b className='text-gray-800'>Our Mission</b>

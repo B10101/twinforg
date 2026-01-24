@@ -10,26 +10,26 @@ const Footer = () => {
         <div>
           <p className=' text-xl font-medium mb-5 text-gray-800 text-right sm:text-center'>QUICK LINKS</p>
           <ul className='flex flex-col gap-2 text-gray-600'>
-            <NavLink to='/' className='flex flex-col items-center gap-1'>
+            <NavLink to='/' className='flex flex-col items-center gap-1' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <p> HOME </p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
             </NavLink>
-            <NavLink to='/about' className='flex flex-col items-center gap-2'>
+            <NavLink to='/about' className='flex flex-col items-center gap-2' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <p> ABOUT </p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
             </NavLink>
 
-            <NavLink to='/collection' className='flex flex-col items-center gap-2'>
+            <NavLink to='/collection' className='flex flex-col items-center gap-2' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <p> LUME</p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
             </NavLink>
-            <NavLink to='/tinkertronics' className='flex flex-col items-center gap-2'>
+            <NavLink to='/tinkertronics' className='flex flex-col items-center gap-2' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <p> TINKERTRONICS</p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
             </NavLink>
             
 
-            <NavLink to='/contact' className='flex flex-col items-center gap-2'>
+            <NavLink to='/contact' className='flex flex-col items-center gap-2' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <p> CONTACT </p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
             </NavLink>
@@ -39,6 +39,7 @@ const Footer = () => {
         {/* Logo Section - Center */}
         <div className='flex flex-col items-center'>
           <img src={twinforge_icon} alt="Logo" className='mb-5 w-32 rounded-xl drop-shadow-lg' />
+          <p className='text-center text-gray-600'>By</p>
           <p className='text-center text-gray-600'>Twinforge Technologies</p>
           <p className='text-center text-gray-500 text-xs mt-2'>Innovating the Future</p>
         </div>

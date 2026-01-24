@@ -21,7 +21,7 @@ import close from "./close.png";
 import lume_pic from "./lume_pic.jpg";
 import trinkets from "./trinkets.png";
 import instagram from "./instagram_icon.png";
-import twinforge_icon from "./twinforge.jpeg";
+import twinforge_icon from "./layeredKe.jpg";
 import front from "./front.png";
 
 export {

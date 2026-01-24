@@ -1,4 +1,4 @@
-import logo from "./nav-logo.jpeg";
+import logo from "./layeredKe.jpg";
 import cross from "./cross_icon.png";
 import add from "./add.png";
 import upload from "./upload_cloud_icon.svg";

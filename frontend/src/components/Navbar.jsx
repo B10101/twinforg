@@ -50,7 +50,6 @@ const Navbar = () => {
         </ul>
 
         <div className='flex items-center gap-6 pt-7'>
-            <img onClick={() => setShowSearch(true)} src={search_icon} className='w-6 cursor-pointer' alt="" />
             <div className='group relative'>
                 <img 
                     onClick={() => {
@@ -97,9 +96,10 @@ const Navbar = () => {
                         <p>Back</p>
                     </div>
                     <NavLink onClick={()=>setVisible(!visible)} to='/' className='flex flex-col items-center gap-1 py-5'>HOME</NavLink>
-                    <NavLink onClick={()=>setVisible(!visible)} to='/collection' className='flex flex-col items-center gap-1 py-5'>LUME</NavLink>
-                    <NavLink onClick={()=>setVisible(!visible)} to='/tinkertronics' className='flex flex-col items-center gap-1 py-5'>TINKERTRONICS</NavLink>
                     <NavLink onClick={()=>setVisible(!visible)} to='/about' className='flex flex-col items-center gap-1 py-5'>ABOUT</NavLink>
+                    <NavLink onClick={()=>setVisible(!visible)} to='/portfolio' className='flex flex-col items-center gap-1 py-5'>PORTFOLIO</NavLink>
+                    <NavLink onClick={()=>setVisible(!visible)} to='/collection' className='flex flex-col items-center gap-1 py-5'>LUME</NavLink>
+                    <NavLink onClick={()=>setVisible(!visible)} to='/tinkertronics' className='flex flex-col items-center gap-1 py-5'>TINKERTRONICS</NavLink>                    
                     <NavLink onClick={()=>setVisible(!visible)} to='/contact' className='flex flex-col items-center gap-1 py-5'>CONTACT</NavLink>
                 </div>
             </div>

@@ -155,10 +155,10 @@ const PlaceOrder = () => {
               <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'paystack'? 'bg-green-400': ''}`}></p>
               <img className='h-10 mx-4' src={card} alt="card" />
             </div>
-            <div onClick={()=> setMethod('mpesa')} className='flex items-center gap-3 border p-2 px-3 cursor-pointer'>
+            {/* <div onClick={()=> setMethod('mpesa')} className='flex items-center gap-3 border p-2 px-3 cursor-pointer'>
               <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'mpesa'? 'bg-green-400': ''}`}></p>
               <img className='h-10 mx-4' src={mpesaicon} alt="card" />
-            </div>
+            </div> */}
             <div onClick={()=> setMethod('cod')} className='flex items-center gap-3 border p-2 px-3 cursor-pointer'>
               <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'cod'? 'bg-green-400': ''}`}></p>
               <p className='flex items-center h-10 mx-4 text-gray-500 text-sm font-medium'>CASH ON DELIVERY</p>
