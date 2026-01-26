@@ -4,6 +4,7 @@ import { card, cart, mpesaicon, stripe, visa } from '../assets/assets'
 import { ShopContext } from '../context/ShopContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import transition from '../transition';
 
 const PlaceOrder = () => {
 
@@ -173,4 +174,4 @@ const PlaceOrder = () => {
   )
 }
 
-export default PlaceOrder
+export default transition(PlaceOrder)

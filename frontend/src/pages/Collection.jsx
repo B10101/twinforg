@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { dropdown } from '../assets/assets';
 import { ShopContext } from '../context/ShopContext';
 import { ProductItem, Title } from '../components';
+import transition from '../transition';
 
 const Collection = () => {
   const { all_product, search, showSearch} = useContext(ShopContext);
@@ -76,4 +77,4 @@ const Collection = () => {
   )
 }
 
-export default Collection
+export default transition(Collection)

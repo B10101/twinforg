@@ -4,6 +4,7 @@ import { GoogleLogin } from '@react-oauth/google'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { ShopContext } from '../context/ShopContext'
+import transition from '../transition';
 
 const Login = () => {
   const [mode, setMode] = useState('login')
@@ -173,4 +174,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default transition(Login)

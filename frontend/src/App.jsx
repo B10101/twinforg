@@ -1,11 +1,13 @@
 import React from 'react'
-import { Routes,Route } from 'react-router-dom'
+import { Routes,Route, useLocation } from 'react-router-dom'
 import { Home,About,Contact,Login, Product, Collection, Cart, PlaceOrder, Orders, VerifyPayment,PaymentStatus, Tinkertronics, Portfolio} from './pages'
 import { Footer, Navbar, Searchbar } from './components'
 import {ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { AnimatePresence } from 'framer-motion'
 
 const App = () => {
+  const location = useLocation();
   return (
     <div className='min-h-screen flex flex-col' style={{backgroundColor: '#DBE4F6'}}>
       <ToastContainer/>
@@ -17,7 +19,8 @@ const App = () => {
       </div>
       
       <div className='flex-1 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[10vw]'>
-        <Routes>
+        <AnimatePresence mode='wait'>
+        <Routes location={location} key={location.key}>
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/contact' element={<Contact/>}/>
@@ -32,7 +35,9 @@ const App = () => {
           <Route path='/payment-status/:orderId' element={<PaymentStatus />} />
           <Route path='/portfolio' element={<Portfolio />} />
         </Routes>
+        
         <Footer/>
+        </AnimatePresence>
       </div>
     </div>
   )

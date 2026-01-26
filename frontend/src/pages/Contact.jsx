@@ -1,5 +1,6 @@
 import React from 'react'
 import { Title } from '../components'
+import transition from '../transition';
 
 const Contact = () => {
 
@@ -114,4 +115,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default transition(Contact)

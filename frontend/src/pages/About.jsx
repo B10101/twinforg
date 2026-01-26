@@ -2,6 +2,7 @@ import React from 'react'
 import { HeroAbt, Title } from '../components'
 import { front } from '../assets/assets'
 import { Link } from 'react-router-dom'
+import transition from '../transition.jsx'
 
 const About = () => {
   return (
@@ -87,4 +88,4 @@ const About = () => {
   )
 }
 
-export default About
+export default transition(About)

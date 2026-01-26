@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import { Title } from '../components'
 import { Link } from 'react-router-dom'
 import { PortfolioContext } from '../context/PortfolioContext'
+import transition from '../transition';
 
 const Portfolio = () => {
   const { projects, categories, getProjectsByCategory, loading } = useContext(PortfolioContext)
@@ -114,4 +115,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio
+export default transition(Portfolio)

@@ -3,6 +3,7 @@ import { ShopContext } from '../context/ShopContext';
 import { CartTotal, Title } from '../components';
 import { bin } from '../assets/assets';
 import { toast } from 'react-toastify';
+import transition from '../transition';
 
 
 const Cart = () => {
@@ -92,4 +93,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default transition(Cart)

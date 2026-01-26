@@ -1,5 +1,6 @@
 import React from 'react'
 import { Hero, LatestCollection, OurPolicy } from '../components'
+import transition from '../transition';
 
 const Home = () => {
   return (
@@ -10,4 +11,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default transition(Home)
