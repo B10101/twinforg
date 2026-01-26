@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Bitcount Single';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bitcountsingle/v3/or2uQ6T72-iP2RY6OLSkb95a817cjULDyyhvb6tTxCxtAOObpH9NnfLjSWiXv_OGqtjRD0BNzrItMZWC-9SK8R6EpA2l9RAyEMMpng.woff2) format('woff2');
+}
+
+
 a.active hr{
-    display: block;
+  display: block;
 }
 
 .prata-regular {
@@ -17,20 +25,31 @@ a.active hr{
   display: none;
 }
 
-*{
+roboto{
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 @media (max-width:640px) {
   a.active{
     background-color: beige;
-  
   }
 }
+
+.bitcount-single {
+  font-family: "Bitcount Single", system-ui !important;
+  font-optical-sizing: auto;
+  font-weight: 400 !important;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
 .slide-in {
   position: fixed;
   top: 0;

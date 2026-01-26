@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import Searchbar from "./Searchbar";
 import RelatedProducts from "./relatedProducts";
 import CartTotal from "./CartTotal";
+import FlipLink from "./FlipLink";
 
 export {
     Navbar,
@@ -21,5 +22,6 @@ export {
     Searchbar,
     RelatedProducts,
     CartTotal,
-    HeroAbt
+    HeroAbt,
+    FlipLink
 }

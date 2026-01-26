@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Routes,Route, useLocation } from 'react-router-dom'
 import { Home,About,Contact,Login, Product, Collection, Cart, PlaceOrder, Orders, VerifyPayment,PaymentStatus, Tinkertronics, Portfolio} from './pages'
 import { Footer, Navbar, Searchbar } from './components'
@@ -8,6 +8,9 @@ import { AnimatePresence } from 'framer-motion'
 
 const App = () => {
   const location = useLocation();
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   return (
     <div className='min-h-screen flex flex-col' style={{backgroundColor: '#DBE4F6'}}>
       <ToastContainer/>

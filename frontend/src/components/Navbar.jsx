@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import { logo, profile, search_icon, cart, menu, back, twinforge_icon } from '../assets/assets'
 import { NavLink, Link } from 'react-router-dom' 
 import { ShopContext } from '../context/ShopContext'
+import FlipLink from './FlipLink'
 
 
 const Navbar = () => {
@@ -20,33 +21,33 @@ const Navbar = () => {
     <div className='flex flex-items-center justify-between py-5 font-medium'>
         <Link to='/'><img src={twinforge_icon} className='w-16 rounded-xl drop-shadow' alt="" /></Link>
         <ul className='hidden sm:flex gap-5 text-sm text-gray-700 pt-10'>
-            <NavLink to='/' className='flex flex-col items-center gap-1'>
+            <FlipLink to='/' className='flex flex-col items-center gap-1'>
                 <p> HOME </p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
-            </NavLink>
-            <NavLink to='/about' className='flex flex-col items-center gap-2'>
+            </FlipLink>
+            <FlipLink  to='/about' className='flex flex-col items-center gap-2'>
                 <p> ABOUT </p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
-            </NavLink>
-            <NavLink to='/portfolio' className='flex flex-col items-center gap-2'>
+            </FlipLink >
+            <FlipLink to='/portfolio' className='flex flex-col items-center gap-2'>
                 <p> PORTFOLIO </p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
-            </NavLink>
+            </FlipLink >
 
-            <NavLink to='/collection' className='flex flex-col items-center gap-2'>
+            <FlipLink  to='/collection' className='flex flex-col items-center gap-2'>
                 <p> LUME</p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-            </NavLink>
-            <NavLink to='/tinkertronics' className='flex flex-col items-center gap-2'>
+            </FlipLink >
+            <FlipLink  to='/tinkertronics' className='flex flex-col items-center gap-2'>
                 <p> TINKERTRONICS</p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-            </NavLink>
+            </FlipLink >
             
 
-            <NavLink to='/contact' className='flex flex-col items-center gap-2'>
+            <FlipLink to='/contact' className='flex flex-col items-center gap-2'>
                 <p> CONTACT </p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
-            </NavLink>        
+            </FlipLink>        
         </ul>
 
         <div className='flex items-center gap-6 pt-7'>
