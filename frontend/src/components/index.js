@@ -10,6 +10,7 @@ import Searchbar from "./Searchbar";
 import RelatedProducts from "./relatedProducts";
 import CartTotal from "./CartTotal";
 import FlipLink from "./FlipLink";
+import ScrambleText from "./ScrambleText";
 
 export {
     Navbar,
@@ -23,5 +24,6 @@ export {
     RelatedProducts,
     CartTotal,
     HeroAbt,
-    FlipLink
+    FlipLink,
+    ScrambleText
 }

@@ -1,17 +1,32 @@
 import React from 'react'
 import { front } from '../assets/assets'
+import {ScrambleText } from '../components'
 
 const Hero = () => {
+  const arrivalsSequence = [
+    {
+      text: "This is Layered",
+      chars: "upperAndLowerCase",
+      duration: 4,
+      speed: 1.3,
+      initialText: "This is Layered" // Changed to match final text
+    }
+  ];
   return (
     <div className='border border-gray-100 m-2 sm:m-8 rounded-xl shadow-lg'>
       {/* Text section at top */}
       <div className='px-10 py-10 bg-gray-50'>
         <div className='flex items-center justify-center gap-2'>
           <p className='w-8 md:w-12 h-[2px] bg-[#414141]'></p>
-          <p className='prata-regular font-medium text-sm md:text-base text-[#414141]'>WELCOME TO</p>
+          <p className='prata-regular font-medium text-sm md:text-base text-[#414141]'>WELCOME</p>
           <p className='w-8 md:w-12 h-[2px] bg-[#414141]'></p>
         </div>
-        <h1 className='prata-regular text-3xl sm:py-3 md:text-5xl font-bold pt-5 leading-relaxed text-[#414141] text-center'>Layered</h1>
+        <h1 className='prata-regular text-3xl sm:py-3 md:text-5xl font-bold pt-5 leading-relaxed text-[#414141] text-center'><ScrambleText
+                sequences={arrivalsSequence}
+                replayOnClick={true}
+                className="prata-regular inline-block min-w-[280px] md:min-w-[400px]"
+                as="span"
+              /></h1>
         <div className='flex items-center justify-center gap-2'>
           <p className='w-8 md:w-12 h-[2px] bg-[#414141]'></p>
           <p className='font-semibold text-sm md:text-base text-[#414141]'>Ke</p>

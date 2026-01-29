@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <div className='flex flex-items-center justify-between py-5 font-medium'>
         <Link to='/'><img src={twinforge_icon} className='w-16 rounded-xl drop-shadow' alt="" /></Link>
-        <ul className='hidden sm:flex gap-5 text-sm text-gray-700 pt-10'>
+        <ul className='hidden sm:flex gap-5 text-md text-gray-700  pt-10 montserrat-regular'>
             <FlipLink to='/' className='flex flex-col items-center gap-1'>
                 <p> HOME </p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
