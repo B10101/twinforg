@@ -3,19 +3,96 @@ import { HeroAbt, Title } from '../components'
 import { front } from '../assets/assets'
 import { Link } from 'react-router-dom'
 import transition from '../transition.jsx'
+import { useLayerPinning, layerPinningPresets } from '../hooks/useLayerPinning'
 
 const About = () => {
+  const sections = [
+    {
+      trigger: 'hero',
+      ...layerPinningPresets.fadeAndBlur,
+      scrollTrigger: {
+        start: 'top top',
+        end: '+=100%',
+        pin: true,
+        pinSpacing: false,
+        scrub: 1,
+      },
+    },
+    {
+      trigger: 'content',
+      fromAnimation: { y: 80, opacity: 0 },
+      animation: { y: 0, opacity: 1 },
+      scrollTrigger: {
+        start: 'top 75%',
+        end: 'top 20%',
+        scrub: 1,
+        pin: false,
+      },
+    },
+    {
+      trigger: 'storesTitle',
+      fromAnimation: { y: 60, opacity: 0 },
+      animation: { y: 0, opacity: 1 },
+      scrollTrigger: {
+        start: 'top 80%',
+        end: 'top 50%',
+        scrub: 1,
+        pin: false,
+      },
+    },
+    {
+      trigger: 'stores',
+      animation: { y: -30, opacity: 1 },
+      scrollTrigger: {
+        start: 'top top',
+        end: '+=120%',
+        pin: true,
+        scrub: 1,
+      },
+    },
+    {
+      trigger: 'whyChooseTitle',
+      fromAnimation: { y: 60, opacity: 0 },
+      animation: { y: 0, opacity: 1 },
+      scrollTrigger: {
+        start: 'top 80%',
+        end: 'top 50%',
+        scrub: 1,
+        pin: false,
+      },
+    },
+    {
+      trigger: 'features',
+      fromAnimation: { y: 80, opacity: 0 },
+      animation: { y: 0, opacity: 1 },
+      scrollTrigger: {
+        start: 'top 75%',
+        end: 'top 40%',
+        scrub: 1,
+        pin: false,
+      },
+    },
+  ]
+
+  const { containerRef, sectionRefs } = useLayerPinning(sections)
+
   return (
-    <div>
-      <div className='flex justify-center'>
+    <div ref={containerRef}>
+      {/* Hero Section - Pins and fades */}
+      <div 
+        ref={(el) => (sectionRefs.current['hero'] = el)}
+        className='flex justify-center'
+      >
         <div>
           <HeroAbt />
         </div>
       </div>
 
-      <div className='my-8 flex flex-col items-center gap-4'>
-
-        {/* Text Content Below */}
+      {/* Content Section */}
+      <div 
+        ref={(el) => (sectionRefs.current['content'] = el)}
+        className='my-8 flex flex-col items-center gap-4'
+      >
         <div className='flex flex-col justify-center gap-6 text-gray-600 max-w-3xl px-4'>
           <p>Layered kenya is a subsidiary of Twinforge Technologies that is focused on designing and building innovative consumer technology .</p>
 
@@ -30,11 +107,19 @@ const About = () => {
         </div>
       </div>
 
-      <div className='text-4xl py-4 text-center'>
+      {/* Stores Title */}
+      <div 
+        ref={(el) => (sectionRefs.current['storesTitle'] = el)}
+        className='text-4xl py-4 text-center'
+      >
         <Title text1={'Our'} text2={'Stores'} />
       </div>
 
-      <div className='my-10 flex flex-col items-center gap-8'>
+      {/* Stores Section - Pins while showing content */}
+      <div 
+        ref={(el) => (sectionRefs.current['stores'] = el)}
+        className='my-10 flex flex-col items-center gap-8'
+      >
         <div className='flex flex-col justify-center gap-6 text-gray-600 max-w-3xl px-4'>
           <p>Our company also runs two specialized stores:</p>
 
@@ -64,11 +149,19 @@ const About = () => {
         </div>
       </div>
 
-      <div className='text-4xl py-4 text-center'>
+      {/* Why Choose Us Title */}
+      <div 
+        ref={(el) => (sectionRefs.current['whyChooseTitle'] = el)}
+        className='text-4xl py-4 text-center'
+      >
         <Title text1={'Why'} text2={'Choose Us'} />
       </div>
 
-      <div className='flex flex-col md:flex-row text-sm mb-20 gap-4'>
+      {/* Features Section */}
+      <div 
+        ref={(el) => (sectionRefs.current['features'] = el)}
+        className='flex flex-col md:flex-row text-sm mb-20 gap-4'
+      >
         <div className='rounded-xl px-10 md:px-16 py-6 sm:py-20 flex flex-col gap-4 bg-[#F1F5FD] drop-shadow-lg'>
           <b>Quality Assurance</b>
           <p>We are dedicated to delivering superior solutions that exceed expectations and set industry benchmarks.</p>

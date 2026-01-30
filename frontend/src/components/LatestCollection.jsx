@@ -2,11 +2,54 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Title } from './'
 import { lume_pic, trinkets } from '../assets/assets'
+import { useLayerPinning } from '../hooks/useLayerPinning'
 
 const LatestCollection = () => {
+  const sections = [
+    {
+      trigger: 'header',
+      fromAnimation: { y: 60, opacity: 0 },
+      animation: { y: 0, opacity: 1 },
+      scrollTrigger: {
+        start: 'top 80%',
+        end: 'top 50%',
+        scrub: 1,
+        pin: false,
+      },
+    },
+    {
+      trigger: 'lume',
+      fromAnimation: { x: -100, opacity: 0, scale: 0.95 },
+      animation: { x: 0, opacity: 1, scale: 1 },
+      scrollTrigger: {
+        start: 'top 75%',
+        end: 'top 40%',
+        scrub: 1,
+        pin: false,
+      },
+    },
+    {
+      trigger: 'tinkertronics',
+      fromAnimation: { x: 100, opacity: 0, scale: 0.95 },
+      animation: { x: 0, opacity: 1, scale: 1 },
+      scrollTrigger: {
+        start: 'top 75%',
+        end: 'top 40%',
+        scrub: 1,
+        pin: false,
+      },
+    },
+  ]
+
+  const { containerRef, sectionRefs } = useLayerPinning(sections)
+
   return (
-    <div className='my-10'>
-      <div className='text-center py-8 text-3xl'>
+    <div ref={containerRef} className='my-10'>
+      {/* Header Section */}
+      <div 
+        ref={(el) => (sectionRefs.current['header'] = el)}
+        className='text-center py-8 text-3xl'
+      >
         <Title text1={'WHAT WE'} text2={'DO'}/>
         <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600 mt-4'>
           We offer innovative solutions across two distinct categories, each designed to enhance your experience and meet your unique needs.
@@ -14,7 +57,10 @@ const LatestCollection = () => {
       </div>
 
       {/* Lume Section - Image on Right */}
-      <div className='flex flex-col md:flex-row gap-8 items-center my-16 px-4 sm:px-8'>
+      <div 
+        ref={(el) => (sectionRefs.current['lume'] = el)}
+        className='flex flex-col md:flex-row gap-8 items-center my-16 px-4 sm:px-8'
+      >
         {/* Text on Left */}
         <div className='w-full md:w-1/2'>
           <h2 className='text-2xl sm:text-3xl font-bold text-[#414141] mb-4'>Lume</h2>
@@ -42,7 +88,10 @@ const LatestCollection = () => {
       </div>
 
       {/* Tinkertronics Section - Image on Left */}
-      <div className='flex flex-col md:flex-row-reverse gap-8 items-center my-16 px-4 sm:px-8'>
+      <div 
+        ref={(el) => (sectionRefs.current['tinkertronics'] = el)}
+        className='flex flex-col md:flex-row-reverse gap-8 items-center my-16 px-4 sm:px-8'
+      >
         {/* Text on Right */}
         <div className='w-full md:w-1/2'>
           <h2 className='text-2xl sm:text-3xl font-bold text-[#414141] mb-4'>Tinkertronics</h2>
