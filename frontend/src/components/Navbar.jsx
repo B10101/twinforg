@@ -21,7 +21,7 @@ const Navbar = () => {
     <div className='flex flex-items-center justify-between py-5 font-medium'>
         <Link to='/'><img src={twinforge_icon} className='w-16 rounded-xl drop-shadow' alt="" /></Link>
         <ul className='hidden sm:flex gap-5 text-md text-gray-700  pt-10 montserrat-regular'>
-            <FlipLink to='/' className='flex flex-col items-center gap-1'>
+            <FlipLink to='/' className='flex flex-col items-center gap-2'>
                 <p> HOME </p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
             </FlipLink>
@@ -90,7 +90,7 @@ const Navbar = () => {
                 <p className='absolute right-[-4px] bottom-[-4px] w-4 text-center leading-4 text-white bg-black aspect-square rounded-full text-[8px] '>{getCartCount()}</p>
             </Link>
             <img onClick={()=>setVisible(!visible)} src={ menu } className='w-6 cursor-pointer sm:hidden' alt="" />
-            <div className={`fixed top-0 right-0 bottom-0 overflow-hidden transition ease-in-out duration-300 z-[60] ${visible ? 'w-1/2' : 'w-0' }`} style={{backgroundColor: '#F1F5FD'}}>
+            <div className={`fixed top-0 right-0 bottom-0 overflow-hidden transition ease-in-out duration-300 z-[60] ${visible ? 'w-1/2' : 'w-1' }`} style={{backgroundColor: '#F1F5FD'}}>
                 <div className='flex flex-col text-gray-600 p-3 pt-15'>
                     <div onClick={()=>setVisible(!visible)} className='flex items-center gap-4 cursor-pointer p-3'>
                         <img src={back} className='w-5' alt="" />

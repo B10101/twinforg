@@ -21,7 +21,7 @@ const ScrambleText = ({
         // Main timeline
         const tl = gsap.timeline({
             id: "text-scramble",
-            defaults: { ease: "back.out(1.7)" },
+            defaults: { ease: "back.out(2.7)" },
             onComplete: () => {
                 if (onComplete) onComplete();
             }
@@ -36,13 +36,13 @@ const ScrambleText = ({
                 cursorTl
                     .to(cursor, {
                         opacity: 0,
-                        duration: 1.5,
+                        duration: 1.0,
                         ease: "none",
                         delay: 0.2
                     })
                     .to(cursor, {
                         opacity: 1,
-                        duration: 1.5,
+                        duration: 1.0,
                         ease: "none",
                         delay: 0.2
                     });
@@ -56,14 +56,14 @@ const ScrambleText = ({
 
             // Using the custom scramble implementation
             tl.to(element, {
-                duration: seq.duration || 2,
+                duration: seq.duration || 1,
                 onUpdate: function () {
                     const progress = this.progress();
                     element.textContent = scrambleText(
                         seq.text,
                         progress,
                         seq.chars || 'lowerCase',
-                        seq.speed || 3.0
+                        seq.speed || 2.0
                     );
                 },
                 onComplete: function () {
@@ -102,7 +102,7 @@ const ScrambleText = ({
     }, [sequences, showCursor, onComplete, replayOnClick]);
 
     // Helper function to scramble text
-    const scrambleText = (finalText, progress, charSet, speed = 1.5) => {
+    const scrambleText = (finalText, progress, charSet, speed = 5.5) => {
         const chars = getCharSet(charSet);
         let result = '';
         const revealCount = Math.floor(finalText.length * progress);

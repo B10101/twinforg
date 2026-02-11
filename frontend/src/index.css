@@ -11,6 +11,44 @@
   src: url(https://fonts.gstatic.com/s/bitcountsingle/v3/or2uQ6T72-iP2RY6OLSkb95a817cjULDyyhvb6tTxCxtAOObpH9NnfLjSWiXv_OGqtjRD0BNzrItMZWC-9SK8R6EpA2l9RAyEMMpng.woff2) format('woff2');
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent layout shifts during animations */
+.home-container,
+[ref*="containerRef"] {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  contain: layout style paint;
+}
+
+/* Reduce paint areas during scroll */
+img {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optional: Disable animations on low-end devices or user preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Performance hint for browsers */
+@supports (content-visibility: auto) {
+  .section-wrapper,
+  .section-layer {
+    content-visibility: auto;
+    contain-intrinsic-size: 100vh;
+  }
+}
 
 a.active hr{
   display: block;

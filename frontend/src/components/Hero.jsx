@@ -21,7 +21,7 @@ const Hero = () => {
           <p className='prata-regular font-medium text-sm md:text-base text-[#414141]'>WELCOME</p>
           <p className='w-8 md:w-12 h-[2px] bg-[#414141]'></p>
         </div>
-        <h1 className='prata-regular text-3xl sm:py-3 md:text-5xl font-bold pt-5 leading-relaxed text-[#414141] text-center'><ScrambleText
+        <h1 className='prata-regular text-2xl sm:py-3 md:text-5xl font-bold pt-5 leading-relaxed text-[#414141] text-center'><ScrambleText
                 sequences={arrivalsSequence}
                 replayOnClick={true}
                 className="prata-regular inline-block min-w-[280px] md:min-w-[400px]"
